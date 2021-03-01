@@ -20,7 +20,7 @@ pipeline{
         }
 	stage('run test cases'){
             steps{
-                bat "dotnet test"
+                bat "dotnet test --logger trx"
             }
         }
         stage('start sonarqube analysis'){
