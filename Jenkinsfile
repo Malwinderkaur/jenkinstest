@@ -18,6 +18,11 @@ pipeline{
                 bat "dotnet restore WebApplication4\\WebApplication4.csproj"
             }
         }
+	stage('run test cases'){
+            steps{
+                bat "dotnet test"
+            }
+        }
         stage('start sonarqube analysis'){
             steps{
                 withSonarQubeEnv('Test_Sonar')
