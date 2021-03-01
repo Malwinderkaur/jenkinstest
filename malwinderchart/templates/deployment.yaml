@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: malwinder-nagp-dotnet-app
+  labels:
+    app: malwinder-nagp-dotnet
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: malwinder-nagp-dotnet
+  template:
+    metadata:
+      labels:
+        app: malwinder-nagp-dotnet
+    spec:
+      containers:
+        - name: malwinder-nagp-dotnet
+          image: "{{ .Values.image }}"
+          ports:
+              containerPort: 80
+
+          
