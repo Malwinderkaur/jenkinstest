@@ -22,7 +22,7 @@ pipeline{
             steps{
                 withSonarQubeEnv('Test_Sonar')
                 {
-                    bat 'dotnet "C:/Program Files (x86)/Jenkins/tools/hudson.plugins.sonar.MsBuildSQRunnerInstallation/sonar_scanner_dotnet/SonarScanner.MSBuild.dll" begin /k:"webappanalysis" /n:"webappnagp" /v:1.0'
+                    bat 'dotnet "C:/Program Files (x86)/Jenkins/tools/hudson.plugins.sonar.MsBuildSQRunnerInstallation/sonar_scanner_dotnet/SonarScanner.MSBuild.dll" begin /k:"webappanalysis1" /n:"webappnagp1" /v:1.0'
                 }
             }
         }
